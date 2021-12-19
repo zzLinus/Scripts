@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+killall -9 xwinwrap
+killall -9 mpv
+
+wp=$(cat $HOME/scripts/wallpaper-save)
+wp2=$(cat $HOME/scripts/wallpaper-save2)
+
+xwinwrap -g 1920x1080+0+840 -un -fdt -ni -b -nf -ov -- $HOME/scripts/wallpaper-live WID $wp &
+xwinwrap -g 1080x1920+1920+0 -un -fdt -ni -b -nf -ov -- $HOME/scripts/wallpaper-live WID $wp2 &
+# xwinwrap -g 1920x1080+3840+0 -un -fdt -ni -b -nf -ov -- $HOME/scripts/wallpaper-live WID $wp &
